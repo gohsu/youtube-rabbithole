@@ -4,12 +4,16 @@ A web app to explore the rabbit hole of YouTube's suggested "Up Next" videos.
 
 Coded for me to learn web scraping, flask and some front-end. 
 
+### Background
+
+[Much has been said](https://gohsu.com/dossier.html#youtube) about YouTube's recommendation algorithm. YouTube's goal is to maximise view-time, and it does so by feeding viewers an endless stream of content that is specially curated to keep them glued to the screen. With certain kinds of videos (eg conspiracy theories, sensationalist news, alt-right opinions), the algorithm has the tendency to lead the viewer down a rabbit hole of increasingly radical content. Unsurprisingly, YouTube is quite secretive about how this algorithm is configured. Their Data API also does offer any calls for related videos, making scraping the only way to obtain this information.  Motivated by this, I wanted to explore and visualize the chain of videos that YouTube wants us to watch next.
+
 ### Required
 
-* Selenium WebDriver
+* Selenium WebDriver (for Chrome)
 * Flask
 
-### How to run
+### Run on localhost
 
 ```bash
 cd <projectdirectory>
@@ -17,20 +21,13 @@ export FLASK_APP=app.py
 flask run
 ```
 
-### Current issues/to do
+### Current issues/TO DO
 
-* scraper does not handle youtube ads well
-* for some reason, it can loop between 2-3 video links although the up next algo does not really repeat videos (I suspect this is because of the ads)
+* scraper cannot deal with ads; will end up looping between 2-3 video links although the up next algo does not really repeat videos (I suspect this is because of the ads)
 * not sure how to host this, hmm...
-* design a pretty front-end and write some accompanying text
+* design a pretty front-end
 
-### Inspired by:
+### Current app
 
-* [All of YouTube, Not Just the Algorithm, is a Far-Right Propaganda Machine](https://ffwd.medium.com/all-of-youtube-not-just-the-algorithm-is-a-far-right-propaganda-machine-29b07b12430)
-* [The Making of a YouTube Radical](https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html)
-* [The Most Measured Person in Tech Is Running the Most Chaotic Place on the Internet](https://www.nytimes.com/2019/04/17/business/youtube-ceo-susan-wojcicki.html)
-* ['Fiction is outperforming reality'](https://www.theguardian.com/technology/2018/feb/02/how-youtubes-algorithm-distorts-truth)
-* [Your Undivided Attention Ep 4: Down the Rabbit Hole by Design](http://humanetech.com/wp-content/uploads/2019/07/CHT-Undivided-Attention-Podcast-Ep.4-Down-the-Rabbit-Hole.pdf)
-
-
+![app](screenshot.png)
 
